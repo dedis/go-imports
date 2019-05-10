@@ -5,6 +5,7 @@ package main
 import (
 	"bytes"
 	"context"
+	"fmt"
 	"html/template"
 	"regexp"
 	"strings"
@@ -64,18 +65,18 @@ func makeRedirection() events.APIGatewayProxyResponse {
 	}
 }
 
-func makeError(code int) events.APIGatewayProxyResponse {
+func makeError(code int, body string) events.APIGatewayProxyResponse {
 	return events.APIGatewayProxyResponse{
 		Headers:    map[string]string{"Content-Type": "text/html"},
 		StatusCode: code,
-		Body: `<!DOCTYPE html>
+		Body: fmt.Sprintf(`<!DOCTYPE html>
 		<html>
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		</head>
-		<body><h1>404 Page Not Found</h1></body>
+		<body>%s</body>
 		</html>
-		`,
+		`, body),
 	}
 }
 
@@ -95,7 +96,7 @@ func handleRequest(ctx context.Context, req events.APIGatewayProxyRequest) (even
 
 	repo, ok := repoMap[head]
 	if !ok {
-		return makeError(404), nil
+		return makeError(404, "<h1>404 Page Not Found</h1>"), nil
 	}
 	data := struct {
 		Head, Tail string
@@ -104,7 +105,7 @@ func handleRequest(ctx context.Context, req events.APIGatewayProxyRequest) (even
 
 	buf := bytes.NewBufferString("")
 	if err := xTemplate.Execute(buf, data); err != nil {
-		return makeError(500), err
+		return makeError(500, "<h1>500 Bad Request</h1>"), err
 	}
 
 	return events.APIGatewayProxyResponse{
