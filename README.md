@@ -36,7 +36,7 @@ Default output format [None]: json
 ```
 
 You can now deploy your changes using the provided script that will pack the
-lambda code ina  zip file and upload it to AWS.
+lambda code in a zip file and upload it to AWS.
 
 ```
 ./deploy.sh
