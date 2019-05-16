@@ -36,12 +36,12 @@ var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta name="go-import" content="go2.dedis.ch/{{.Head}} {{.Repo.VCS}} {{.Repo.URL}}">
-		<meta name="go-source" content="go2.dedis.ch/{{.Head}} https://github.com/dedis/{{.Head}}/ https://github.com/dedis/{{.Head}}/tree/master{/dir} https://github.com/dedis/{{.Head}}/blob/master{/dir}/{file}#L{line}">
-		<meta http-equiv="refresh" content="0; url=https://godoc.org/go2.dedis.ch/{{.Head}}{{.Tail}}">
+		<meta name="go-import" content="go.dedis.ch/{{.Head}} {{.Repo.VCS}} {{.Repo.URL}}">
+		<meta name="go-source" content="go.dedis.ch/{{.Head}} https://github.com/dedis/{{.Head}}/ https://github.com/dedis/{{.Head}}/tree/master{/dir} https://github.com/dedis/{{.Head}}/blob/master{/dir}/{file}#L{line}">
+		<meta http-equiv="refresh" content="0; url=https://godoc.org/go.dedis.ch/{{.Head}}{{.Tail}}">
 	</head>
 	<body>
-		Nothing to see here; <a href="https://godoc.org/go2.dedis.ch/{{.Head}}{{.Tail}}">move along</a>.
+		Nothing to see here; <a href="https://godoc.org/go.dedis.ch/{{.Head}}{{.Tail}}">move along</a>.
 	</body>
 </html>
 `))

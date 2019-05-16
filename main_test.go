@@ -10,11 +10,11 @@ import (
 func TestMain_HandleRequest(t *testing.T) {
 	ret, err := handleRequest(nil, events.APIGatewayProxyRequest{Path: "/cothority/"})
 	require.NoError(t, err)
-	require.Contains(t, ret.Body, `<meta http-equiv="refresh" content="0; url=https://godoc.org/go2.dedis.ch/cothority/">`)
+	require.Contains(t, ret.Body, `<meta http-equiv="refresh" content="0; url=https://godoc.org/go.dedis.ch/cothority/">`)
 
 	ret, err = handleRequest(nil, events.APIGatewayProxyRequest{Path: "/cothority/v3/blscosi"})
 	require.NoError(t, err)
-	require.Contains(t, ret.Body, `<meta http-equiv="refresh" content="0; url=https://godoc.org/go2.dedis.ch/cothority/blscosi">`)
+	require.Contains(t, ret.Body, `<meta http-equiv="refresh" content="0; url=https://godoc.org/go.dedis.ch/cothority/blscosi">`)
 
 	ret, err = handleRequest(nil, events.APIGatewayProxyRequest{Path: "/abc"})
 	require.NoError(t, err)
