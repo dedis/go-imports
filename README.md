@@ -20,6 +20,7 @@ The domain of the modules is `go.dedis.ch` and the following are supported:
 - `https://github.com/dedis/kyber`
 - `https://github.com/dedis/onet`
 - `https://github.com/dedis/protobuf`
+- `https://github.com/dedis/fixbuf`
 
 ## Contribute
 
