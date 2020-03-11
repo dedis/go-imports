@@ -25,12 +25,14 @@ type repository struct {
 
 // repoMap contains the list of repositories distributed by DEDIS
 var repoMap = map[string]repository{
-	"cothority": {"https://github.com/dedis/cothority", "git"},
-	"kyber":     {"https://github.com/dedis/kyber", "git"},
-	"onet":      {"https://github.com/dedis/onet", "git"},
-	"protobuf":  {"https://github.com/dedis/protobuf", "git"},
-	"fixbuf":    {"https://github.com/dedis/fixbuf", "git"},
-	"simnet":    {"https://github.com/dedis/simnet", "git"},
+	"cothority":  {"https://github.com/dedis/cothority", "git"},
+	"kyber":      {"https://github.com/dedis/kyber", "git"},
+	"onet":       {"https://github.com/dedis/onet", "git"},
+	"protobuf":   {"https://github.com/dedis/protobuf", "git"},
+	"fixbuf":     {"https://github.com/dedis/fixbuf", "git"},
+	"simnet":     {"https://github.com/dedis/simnet", "git"},
+	"purbs":      {"https://github.com/dedis/purbs", "git"},
+	"indyclient": {"https://github.com/dedis/indyclient", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>

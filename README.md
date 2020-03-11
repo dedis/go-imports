@@ -14,13 +14,8 @@ as a base but modified to fit the DEDIS repositories.
 
 ## Supported repositories
 
-The domain of the modules is `go.dedis.ch` and the following are supported:
-
-- `https://github.com/dedis/cothority`
-- `https://github.com/dedis/kyber`
-- `https://github.com/dedis/onet`
-- `https://github.com/dedis/protobuf`
-- `https://github.com/dedis/fixbuf`
+The domain of the modules is `go.dedis.ch`. The list of repositories supported is in
+`main.go`.
 
 ## Contribute
 
