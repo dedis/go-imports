@@ -33,6 +33,7 @@ var repoMap = map[string]repository{
 	"simnet":     {"https://github.com/dedis/simnet", "git"},
 	"purbs":      {"https://github.com/dedis/purbs", "git"},
 	"indyclient": {"https://github.com/dedis/indyclient", "git"},
+	"dela":       {"https://github.com/dedis/dela", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
