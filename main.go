@@ -35,6 +35,7 @@ var repoMap = map[string]repository{
 	"indyclient": {"https://github.com/dedis/indyclient", "git"},
 	"dela":       {"https://github.com/dedis/dela", "git"},
 	"dela-apps":  {"https://github.com/dedis/dela-apps", "git"},
+	"cs438":      {"https://github.com/dedis/cs438", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
