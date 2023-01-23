@@ -36,6 +36,7 @@ var repoMap = map[string]repository{
 	"dela":       {"https://github.com/dedis/dela", "git"},
 	"dela-apps":  {"https://github.com/dedis/dela-apps", "git"},
 	"cs438":      {"https://github.com/dedis/cs438", "git"},
+	"polypus-go": {"https://github.com/dedis/polypus-go", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
