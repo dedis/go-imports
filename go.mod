@@ -1,8 +1,13 @@
 module go.dedis.ch/go-imports
 
-go 1.12
+go 1.21
 
 require (
-	github.com/aws/aws-lambda-go v1.10.0
-	github.com/stretchr/testify v1.3.0
+	github.com/aws/aws-lambda-go v1.41.0
+	github.com/stretchr/testify v1.7.2
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 )
