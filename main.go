@@ -39,6 +39,7 @@ var repoMap = map[string]repository{
 	"polypus-go": {"https://github.com/dedis/polypus-go", "git"},
 	"libpurb":    {"https://github.com/dedis/libpurb", "git"},
 	"purb-db":    {"https://github.com/dedis/purb-db", "git"},
+	"debugtools": {"https://github.com/dedis/debugtools", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
