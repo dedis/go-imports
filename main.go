@@ -37,6 +37,9 @@ var repoMap = map[string]repository{
 	"dela-apps":  {"https://github.com/dedis/dela-apps", "git"},
 	"cs438":      {"https://github.com/dedis/cs438", "git"},
 	"polypus-go": {"https://github.com/dedis/polypus-go", "git"},
+	"libpurb":    {"https://github.com/dedis/libpurb", "git"},
+	"purb-db":    {"https://github.com/dedis/purb-db", "git"},
+	"debugtools": {"https://github.com/dedis/debugtools", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
@@ -87,7 +90,10 @@ func makeError(code int, body string) events.APIGatewayProxyResponse {
 	}
 }
 
-func handleRequest(ctx context.Context, req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+func handleRequest(
+	ctx context.Context,
+	req events.APIGatewayProxyRequest,
+) (events.APIGatewayProxyResponse, error) {
 	head, tail := strings.TrimPrefix(req.Path, prefix), ""
 	if i := strings.Index(head, "/"); i != -1 {
 		head, tail = head[:i], head[i:]
