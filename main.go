@@ -26,21 +26,21 @@ type repository struct {
 // repoMap contains the list of repositories distributed by DEDIS
 var repoMap = map[string]repository{
 	"cothority":  {"https://github.com/dedis/cothority", "git"},
-	"kyber":      {"https://github.com/dedis/kyber", "git"},
-	"onet":       {"https://github.com/dedis/onet", "git"},
-	"protobuf":   {"https://github.com/dedis/protobuf", "git"},
-	"fixbuf":     {"https://github.com/dedis/fixbuf", "git"},
-	"simnet":     {"https://github.com/dedis/simnet", "git"},
-	"purbs":      {"https://github.com/dedis/purbs", "git"},
-	"indyclient": {"https://github.com/dedis/indyclient", "git"},
+	"cs438":      {"https://github.com/dedis/cs438", "git"},
+	"debugtools": {"https://github.com/dedis/debugtools", "git"},
 	"dela":       {"https://github.com/dedis/dela", "git"},
 	"d-voting":   {"https://github.com/dedis/d-voting", "git"},
 	"dela-apps":  {"https://github.com/dedis/dela-apps", "git"},
-	"cs438":      {"https://github.com/dedis/cs438", "git"},
-	"polypus-go": {"https://github.com/dedis/polypus-go", "git"},
+	"fixbuf":     {"https://github.com/dedis/fixbuf", "git"},
+	"indyclient": {"https://github.com/dedis/indyclient", "git"},
+	"kyber":      {"https://github.com/dedis/kyber", "git"},
 	"libpurb":    {"https://github.com/dedis/libpurb", "git"},
+	"onet":       {"https://github.com/dedis/onet", "git"},
+	"polypus-go": {"https://github.com/dedis/polypus-go", "git"},
+	"protobuf":   {"https://github.com/dedis/protobuf", "git"},
+	"purbs":      {"https://github.com/dedis/purbs", "git"},
 	"purb-db":    {"https://github.com/dedis/purb-db", "git"},
-	"debugtools": {"https://github.com/dedis/debugtools", "git"},
+	"simnet":     {"https://github.com/dedis/simnet", "git"},
 }
 
 var xTemplate = template.Must(template.New("x").Parse(`<!DOCTYPE html>
