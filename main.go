@@ -35,6 +35,7 @@ var repoMap = map[string]repository{
 	"indyclient": {"https://github.com/dedis/indyclient", "git"},
 	"dela":       {"https://github.com/dedis/dela", "git"},
 	"dela-apps":  {"https://github.com/dedis/dela-apps", "git"},
+	"d-voting":   {"https://github.com/dedis/d-voting", "git"},
 	"cs438":      {"https://github.com/dedis/cs438", "git"},
 	"polypus-go": {"https://github.com/dedis/polypus-go", "git"},
 	"libpurb":    {"https://github.com/dedis/libpurb", "git"},
